@@ -55,14 +55,16 @@ function Temp() {
         <>
           <div>
             <h2>{fetchedData.data.category.name}</h2>
+            <p>Name: {fetchedData.data.name}</p>
+            <p>SKU : {fetchedData.data.sku}</p>
             <p>{fetchedData.data.description}</p>
-            <h3>Price : {fetchedData.data.price} $</h3>
+            <p>Price : {fetchedData.data.price} $</p>
             <p>
-              <h2>Quantity</h2>
-              <button onClick={incrementHandler}>Increment</button>
-
-              {quantity}
-
+              Quantity :
+              <br />
+              <button onClick={incrementHandler}> Increment </button>
+              <br />
+              {quantity} <br />
               <button onClick={decrementHandler}>Decrement</button>
             </p>
             {/* {fetchedData.images.map((image) => console.log(image[0]))} */}
@@ -70,7 +72,7 @@ function Temp() {
           </div>
         </>
       ) : (
-        <p>Loading...</p>
+        <p> Click POST...</p>
       )}
     </div>
   );
