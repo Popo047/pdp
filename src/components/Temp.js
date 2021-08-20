@@ -4,7 +4,6 @@ import { pdpActions } from "../redux/pdp-slice";
 
 function Temp() {
   const dispatch = useDispatch();
-
   const storeRef = useRef();
   const idRef = useRef();
   const fetchedData = useSelector((state) => state.pdp.fetchedData);
