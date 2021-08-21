@@ -67,8 +67,10 @@ function Temp() {
               {quantity} <br />
               <button onClick={decrementHandler}>Decrement</button>
             </p>
-            {/* {fetchedData.images.map((image) => console.log(image[0]))} */}
-            <img src={fetchedData.data.images[0].images} alt="something" />
+            {fetchedData.data.images.map((image) => (
+              <img src={image.images} key={image.id} alt="something" />
+            ))}
+            {/* <img src={fetchedData.data.images[0].images} alt="something" /> */}
           </div>
         </>
       ) : (
